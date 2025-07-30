@@ -55,22 +55,20 @@ Your API will now run locally at:
 Swagger UI will be available at:
 👉 http://127.0.0.1:5000/docs
 
-🔥 API Endpoints
+4. **API Endpoints**
 🟢 Hello API
 GET /hello
 Response:
 
-json
-
 {
   "msg": "Hello World!"
 }
+
+
 🟢 Prediction API
 POST /predict
 
 Request Body (JSON):
-
-json
 
 {
   "gestation": [279],
@@ -80,22 +78,27 @@ json
   "weight": [100],
   "smoke": [0]
 }
+
+
 Response:
 
-json
-Copy code
+
 {
   "Prediction": 123.45
 }
-🧪 Running Tests
-Run unit tests using pytest:
 
+
+5. **Running Tests**
+
+Run unit tests using pytest:
 pytest test_app.py  
-🚀 Deployment
+
+6. **Deployment**
+   
 Designed for Render/Heroku using Gunicorn.
 
 Start command:
-
 gunicorn app:app  
+
 🤝 Contribute
 Feel free to fork this repo, make improvements, and submit a pull request!
