@@ -1,7 +1,9 @@
-Birth Weight Prediction API
+---
+## Birth Weight Prediction API
 A Flask-based REST API that predicts a baby's birth weight based on various maternal health factors. This project uses Flask-RESTX for API documentation (Swagger UI), integrates a pre-trained Machine Learning model, and includes automated testing with pytest.
 
-🚀 Features
+---
+## 🚀 Features
 ✅ Predicts baby birth weight using maternal data
 ✅ Swagger UI documentation (/docs endpoint)
 ✅ REST API with multiple namespaces (Hello, User, Prediction)
@@ -9,7 +11,9 @@ A Flask-based REST API that predicts a baby's birth weight based on various mate
 ✅ Model loading using pickle
 ✅ JSON-based request & response format
 
-🛠 Tech Stack
+---
+
+## 🛠 Tech Stack
 Backend: Flask, Flask-RESTX
 
 ML Model: Scikit-learn (loaded via pickle)
@@ -20,25 +24,30 @@ Data Handling: Pandas, NumPy
 
 Deployment Ready: Configured for Gunicorn (Render/Heroku)
 
-📂 Project Structure
+---
+
+## 📂 Project Structure
 bash
-Copy code
+
 ├── app.py              # Main Flask app with API routes  
 ├── test_app.py          # Unit tests using pytest  
 ├── model.pkl            # Pre-trained ML model (binary file)  
 ├── requirements.txt      # Python dependencies  
-└── README.md             # Project documentation  
-⚙️ Setup Instructions
-1️⃣ Create a virtual environment
+└── README.md             # Project documentation 
+
+---
+
+## ⚙️ Setup Instructions
+1. **Create a virtual environment**
 
 python -m venv venv  
 source venv/bin/activate      # On Linux/Mac  
-venv\Scripts\activate         # On Windows  
-2️⃣ Install dependencies
+venv\Scripts\activate         # On Windows 
 
+2️. **Install dependencies**
 pip install -r requirements.txt  
-3️⃣ Run the Flask server
 
+3️. **Run the Flask server**
 python app.py  
 Your API will now run locally at:
 👉 http://127.0.0.1:5000/
@@ -52,7 +61,7 @@ GET /hello
 Response:
 
 json
-Copy code
+
 {
   "msg": "Hello World!"
 }
@@ -62,7 +71,7 @@ POST /predict
 Request Body (JSON):
 
 json
-Copy code
+
 {
   "gestation": [279],
   "parity": [0],
@@ -81,8 +90,6 @@ Copy code
 🧪 Running Tests
 Run unit tests using pytest:
 
-bash
-Copy code
 pytest test_app.py  
 🚀 Deployment
 Designed for Render/Heroku using Gunicorn.
